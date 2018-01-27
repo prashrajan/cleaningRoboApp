@@ -2,13 +2,9 @@ package com.otto.testapp.robo.domainobject;
 
 import java.util.*;
 
-import org.slf4j.*;
-
 import com.otto.testapp.robo.domainvalue.*;
 
 public class BotCommandSequenceCreater {
-
-    private static org.slf4j.Logger LOG = LoggerFactory.getLogger(BotCommandSequenceCreater.class);
 
     private static char[][] solMatrix;
 
