@@ -5,7 +5,7 @@ import java.util.*;
 public class BotCommandSequenceDO {
 
     private List<String> botCommandSequence = new ArrayList<String>();
-
+    
     public List<String> getBotCommandSequence() {
         return botCommandSequence;
     }

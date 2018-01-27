@@ -14,6 +14,7 @@ import com.otto.testapp.robo.domainobject.*;
 import com.otto.testapp.robo.mapper.*;
 import com.otto.testapp.robo.service.*;
 import com.otto.testapp.robo.util.CustumInvalidInputParameterException;
+import com.otto.testapp.robo.util.CustumPathNotException;
 
 @RestController
 @RequestMapping("robo/bot")
@@ -33,7 +34,7 @@ public class botController {
 
     @PostMapping("/input")
     @ResponseStatus(HttpStatus.CREATED)
-    public List<String> inputInitialCondition(@Valid @NotNull @RequestBody InitialConditionInputDTO initialConditionInputDTO) throws CustumInvalidInputParameterException  {
+    public List<String> inputInitialCondition(@Valid @NotNull @RequestBody InitialConditionInputDTO initialConditionInputDTO) throws CustumInvalidInputParameterException, CustumPathNotException  {
 
         InitialConditionInputDO initialConditionInputDO = InitialConditionInputMapper.mapInitialConditionInput(
                 initialConditionInputDTO);

@@ -3,6 +3,7 @@ package com.otto.testapp.robo.domainobject;
 import org.slf4j.*;
 
 import com.otto.testapp.robo.domainvalue.*;
+import com.otto.testapp.robo.util.CustumPathNotException;
 
 public class BotWorld {
 
@@ -37,12 +38,12 @@ public class BotWorld {
         }
     }
 
-    public char[][] solveBotWorld() {
+    public char[][] solveBotWorld() throws CustumPathNotException {
         if (findPath(initialBotPosition.getXPosition(), initialBotPosition.getYPosition(), Direction.SOUTH)) {
             print(solMatrix);
         } else {
             LOG.info("NO PATH FOUND");
-            throw new AssertionError ("There is no available path found from robo's source to destination !!!");
+            throw new CustumPathNotException ("There is no available path found from robo's source to destination !!!");
         }
         return solMatrix;
     }
