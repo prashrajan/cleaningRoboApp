@@ -30,8 +30,8 @@ public class RoboApplication extends WebMvcConfigurerAdapter {
                                                       .apiInfo(generateApiInfo());
     }
 
-    private ApiInfo generateApiInfo() {
-        return new ApiInfo("Sample App for cleaning robo", "This is a sample app ", "Version 1.0",
-                "", "", "", "");
+	private ApiInfo generateApiInfo() {
+        return new ApiInfo("The Cleaning Robo", "This is a fun web application for finding the shortest and correct path for a robo in a square grid matrix :) ", "Version 1.0",
+                "prashant.rajan@19gmail.com", "Prashant rajan", "", "");
     }
 }
