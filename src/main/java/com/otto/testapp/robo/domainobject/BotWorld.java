@@ -42,6 +42,7 @@ public class BotWorld {
             print(solMatrix);
         } else {
             LOG.info("NO PATH FOUND");
+            throw new AssertionError ("There is no available path found from robo's source to destination !!!");
         }
         return solMatrix;
     }

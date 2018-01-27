@@ -3,6 +3,7 @@ package com.otto.testapp.robo.controllers;
 import java.util.*;
 
 import javax.validation.*;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.*;
@@ -12,6 +13,7 @@ import com.otto.testapp.robo.datatransferobject.*;
 import com.otto.testapp.robo.domainobject.*;
 import com.otto.testapp.robo.mapper.*;
 import com.otto.testapp.robo.service.*;
+import com.otto.testapp.robo.util.CustumInvalidInputParameterException;
 
 @RestController
 @RequestMapping("robo/bot")
@@ -31,7 +33,7 @@ public class botController {
 
     @PostMapping("/input")
     @ResponseStatus(HttpStatus.CREATED)
-    public List<String> inputInitialCondition(@Valid @RequestBody InitialConditionInputDTO initialConditionInputDTO) {
+    public List<String> inputInitialCondition(@Valid @NotNull @RequestBody InitialConditionInputDTO initialConditionInputDTO) throws CustumInvalidInputParameterException  {
 
         InitialConditionInputDO initialConditionInputDO = InitialConditionInputMapper.mapInitialConditionInput(
                 initialConditionInputDTO);
