@@ -1,5 +1,5 @@
 # cleaningRoboApp
-This is a fun application web application for finding the shortest and correct path for a robo in a maze :)
+This is a fun web application for finding the shortest and correct path for a robo in a maze :)
 
 You can start the application after importing the as a maven project in any IDE.
 There is a swagger endpoint which can be very hand for calling the rest end points and http://localhost:8080/swagger-ui.html
